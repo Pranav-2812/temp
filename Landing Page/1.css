@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+
+body {
+line-height: 1.4;
+font-weight: 300;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.first{
+    background-image: url(WallpaperDog-20537334.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.div1{
+    color: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 64px;
+    padding-left: 16px;
+}
+.Heading{
+    font-size: 72px;
+    font-weight:400;
+
+}
+.second{
+    background-color: black;
+    padding: 20px;
+    align-items: center;
+}
+.h2{
+    font-size: 72px;
+    color: white;
+    text-align: center;
+    font-weight: 300;
+
+}
+.you{
+    font-weight: 400;
+    font-size: 96px;
+}
+.work{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    width: 100%;
+    margin: 20px 0;
+    
+   
+}
+.grid_item{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+    
+   
+}
+.cards{
+    max-width: 320px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px rgba(1, 1,1, 0.2);
+
+}
+.cards:hover{
+    transform: scale(1.04);
+    box-shadow: 3px 5px 5px rgba(1, 1,1, 0.3);
+    transition:  0.2s ease-in-out;
+}
+.content{
+    padding: 20px;
+}
+.content_h3{
+    margin-bottom: 10px;
+}
+.img1{
+    background-image: url(WallpaperDog-20537437.jpg);
+    background-repeat: no-repeat;
+    max-width: 320px;
+    height: 300px;
+    background-size: cover;
+    border-radius: 10px;
+
+
+
+}
+.img2{
+    background-image: url(IMG\ 1.jpg);
+    background-repeat: no-repeat;
+    max-width: 320px;
+    height: 300px;
+    background-size: cover;
+    border-radius: 10px;
+
+}
+.img3{
+    background-image: url(jiraiya\ wallpaper.jpg);
+    background-repeat: no-repeat;
+    max-width: 320px;
+    height: 300px;
+    background-size: cover;
+    border-radius: 10px;
+
+}
+.bottom{
+    display: flex;
+}
+.contact{
+    float: left;
+    width: 50%;
+    height: 250px;
+    color: rgba(207, 155, 24, 0.997);
+    background-color: brown;
+    text-align: justify;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 300;
+    padding: 32px;
+    font-size:16px;
+   
+    text-shadow: black;
+   
+    
+}
+.about{
+    float: left;
+    width: 50%;
+    height: 250px;
+    color:rgba(207, 155, 24, 0.997);
+    background-color:green;
+    text-align: justify;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-weight: 300;
+   padding: 32px;
+   font-size: 16px;
+   
+   text-shadow: black;
+   
+   
+}
+.h2{
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+}
+.footer{
+    text-align: center;
+    color: beige;
+    background-color: grey;
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 18px;
+}
