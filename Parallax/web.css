@@ -1,0 +1,102 @@
+html,
+body{
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    color: black;
+}
+.pimg1{
+    background-image: url(WallpaperDog-20537334.jpg);
+    min-height: 100%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+.pimg2{
+    background-image: url(WallpaperDog-20537437.jpg);
+    min-height: 100%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+.pimg3{
+    background-image: url(jiraiya\ wallpaper.jpg);
+    min-height: 100%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color:black;
+    font-size: 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.textbg{
+    background-color: #313131;
+    color: white;
+    padding:  8px;
+    
+}
+.section1{
+    padding : 50px 80px;
+    text-align: center;
+    color: #393535cf;
+    background-color: aliceblue;
+
+}
+.section2{
+    padding: 50px 80px;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #464343;
+}
+.section3{
+    padding: 50px 80px;
+    text-align: center;
+    color: wheat;
+    background-color: #6c5c5ce6;
+}
+.textbg1{
+    background-color: #313131;
+    color: white;
+    padding:  8px;
+    
+
+    
+}
+.ptext1{
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    text-align: center;
+    color:black;
+    font-size: 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.pimg4{
+    background-image: url(IMG\ 1.jpg);
+    min-height: 100%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
