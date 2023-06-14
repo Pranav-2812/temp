@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        * {
+             margin: 0;
+             line-height: 1.4;
+             
+
+        }
+        body{
+            background-image: url(jiraiya\ wallpaper.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .main{
+            margin: auto;
+            margin-top: 200px;
+            border-radius: 35px;
+            box-shadow: 3px 3px 3px 3px;
+            width: 600px;
+            height: 500px;
+            align-items: center;
+            border-color: black;
+            overflow: hidden;
+            background-color: rgba(245, 245, 245, 0.829);
+            
+            
+
+        }
+     input[type=number]{
+        width: 150px;
+        margin-top: 100px;
+        margin-left: 70px;
+        outline: none;
+        box-sizing: border-box;
+        transition: 0.2s;
+        padding: 3px;
+        border-radius: 15px;
+        
+
+     }
+     input[type=number]:hover{
+        border-color: hsla(0, 64%, 61%, 0.895);
+     }
+     #ope{
+        margin-left: 50px;
+        width: 50px;
+        padding: 3px;
+        border-radius: 15px;
+        box-shadow: 3px rgb(85, 84, 84);
+        align-items: center;
+        margin-top: 100px;
+     }
+     input[type=number]#second{
+        margin-left: 70px;
+        width: 150px;
+        margin-top: 100px;
+        outline: none;
+        box-sizing: border-box;
+        transition: 0.2s;
+        border-radius: 15px;
+     }
+     input[type=number]#second:hover{
+        border-color: hsla(0, 64%, 61%, 0.895);
+     }
+     button{
+        margin-left: 265px;
+        border-radius: 15px;
+        background-color:burlywood;
+        transition: 0.2s;
+        margin-top: 30px;
+
+     }
+     button:hover{
+        scale: 1.2;
+        box-shadow: 0px 2px 2px 0px rgb(80, 78, 78);
+     }
+     input[type=text]{
+        margin-left: 200px;
+        margin-top: 65px;
+        width: 200px;
+        outline: 2px;
+        border-color:hsla(0, 64%, 61%, 0.895) ;
+        border-radius: 15px;
+
+     }
+     .header{
+        max-width: 600px;
+        height: 100px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: beige;
+        background-color: rgb(0, 0, 0);
+        font-size: 64px;
+       align-items: center;
+       text-align: center;
+       
+     }
+     @media only screen and (max-width :768px) {
+        body{
+            background-image: url(jiraiya\ wallpaper.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+        .main{
+            margin-left: auto;
+            margin-right: auto;
+           
+           
+        }
+     
+        
+     }
+     @media only screen and (max-width:992px){
+        body{
+            background-image: url(jiraiya\ wallpaper.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+        .main{
+            margin-left: auto;
+            margin-right: auto;
+            
+            
+        }
+       
+     }
+     @media only screen and (min-width:1200px){
+        body{
+            background-image: url(jiraiya\ wallpaper.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+      
+     }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="header">Calculator</div>
+
+    <input type="number" id="first" placeholder="Enter a number" autofocus/>
+
+
+
+  <select id="ope">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">x</option>
+    <option value="%">%</option>
+    <option value="/">/</option>
+  </select>
+
+
+  <input type="number" id="second" placeholder="Enter a number" autofocus/>
+  <br>
+  <br>
+
+  <button onclick="calculate()" onkeypress="calculate()" id="cal">Calculate</button>
+
+  <br>
+  <br>
+  
+   <input type="text" id="res" readonly="" />
+
+</div>
+
+
+</body>
+<script type="text/javascript" >
+  
+    
+    function calculate(){
+
+        var num1 = document.getElementById('first').value;
+        var operator = document.getElementById('ope').value;
+        var num2 = document.getElementById('second').value;
+        if (operator=='+'){
+
+            var res = parseInt(num1) + parseInt(num2);
+
+        }
+        if (operator=='-'){
+
+            var res = parseInt(num1) - parseInt(num2);
+            
+        }
+        if (operator=='*'){
+            var res = parseInt(num1) * parseInt(num2);
+
+        }
+        if( operator=='%'){
+            var res = parseInt(num1) % parseInt(num2);
+
+        }
+        if(operator=='/'){
+            var res = parseInt(num1) / parseInt(num2);
+        }
+        document.getElementById('res').value= res;
+
+    }
+   
+</script>
+</html>
