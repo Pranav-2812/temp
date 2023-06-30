@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="nav">
+        <span class="nav_btn1">Home</span>
+        <span class="nav_btn2">Users</span>
+    </nav>
+    <div class="main">
+        <form id="loginForm">
+            <div class="head">
+                LOG IN HERE
+            </div>
+            <div class="input">
+               <p class="txt">Name</p>
+               <input type="text" autofocus required placeholder="Enter your name" id="name">
+            </div>
+            <div class="input">
+                <p class="txt">Mobile No</p>
+                <input type="number" maxlength="10" placeholder="Your Mob No" id="No">
+            </div>
+            <div class="input">
+                <p class="txt">Date of Birth</p>
+                <input type="date" required placeholder="DOB" id="Dob">
+            </div>
+            <div class="input">
+                <p class="txt">Email</p>
+                <input type="email" required placeholder="abc123@xyc.com" id="mail">
+            </div>
+            <div class="input">
+                <p class="txt">Password</p>
+                <input type="password" required placeholder="Enter Password" id="pass">
+            </div>
+            <br>
+            <div class="button">
+                <button class="btn 1" type="submit">Log in</button> &ensp;&ensp;
+                <button class="btn 2" type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
+    
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            // Add your Firebase configuration here
+            apiKey: "AIzaSyAuF6J_AcmKEx8W6Pc-fPrJpKJFBsPw2_o",
+            authDomain: "fir-dca74.firebaseapp.com",
+            databaseURL: "https://fir-dca74-default-rtdb.firebaseio.com",
+            projectId: "fir-dca74",
+            storageBucket: "fir-dca74.appspot.com",
+            messagingSenderId: "499388079402",
+            appId: "1:499388079402:web:e97a0f8bc32de68fee9253",
+             measurementId: "G-WWL42PRMJ4"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getFirestore(app);
+    
+        const form = document.getElementById("loginForm");
+    
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault(); // Prevent form submission from refreshing the page
+    
+            // Get form values
+            const name = document.getElementById("name").value;
+            const mob_no = document.getElementById("No").value;
+            const dob = document.getElementById("Dob").value;
+            const email = document.getElementById("mail").value;
+            const password = document.getElementById("pass").value;
+    
+            try {
+                const docRef = await addDoc(collection(db, "users"), {
+                    name: name,
+                    mob_no: mob_no,
+                    dob: dob,
+                    email: email,
+                    password: password
+                });
+    
+                console.log("Document written with ID: ", docRef.id);
+                form.reset();
+            } catch (error) {
+                console.error("Error adding document: ", error);
+            }
+        });
+    </script>
+</body>
+</html>
